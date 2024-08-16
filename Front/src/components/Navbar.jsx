@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBitcoin, FaYoutube, FaSquareGithub } from "react-icons/fa6";
 import { BsInstagram } from "react-icons/bs";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = () => {
   const [show, setshow] = useState(false);
@@ -51,6 +52,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
+        <GiHamburgerMenu className="hamburger" onClick={()=>setshow(!show)}/>
       </nav>
     </>
   );
