@@ -4,13 +4,15 @@ import { Link } from "react-router-dom";
 import { FaBitcoin, FaYoutube, FaSquareGithub } from "react-icons/fa6";
 import { BsInstagram } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { IoMdClose } from "react-icons/io";
+import "./Navbar.css";
 
 const Navbar = () => {
-  const [show, setshow] = useState(false);
+  const [show, setShow] = useState(false);
 
   return (
     <>
-      <nav className={show ? "navbar navbar_show" : "navbar"}>
+      <nav className={show ? "navbar show_navbar" : "navbar"}>
         <div className="logo">
           <img src="/logo.png" alt="logo" />
         </div>
@@ -52,7 +54,15 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <GiHamburgerMenu className="hamburger" onClick={()=>setshow(!show)}/>
+        {/* <GiHamburgerMenu className="hamburger" onClick={()=>setShow(!show)}/> */}
+        {show ? (
+          <IoMdClose className="hamburger" onClick={() => setShow(!show)} />
+        ) : (
+          <GiHamburgerMenu
+            className="hamburger"
+            onClick={() => setShow(!show)}
+          />
+        )}
       </nav>
     </>
   );

@@ -1,0 +1,151 @@
+:root {
+    --palestine-black: #000000;
+    --palestine-white: #ffffff;
+    --palestine-green: #007A3D;
+    --palestine-red: #CE1126;
+  }
+
+.hero {
+    min-width: 1500px;
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    min-height: 800px;
+  }
+  .hero .banner {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hero .banner h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--palestine-red);
+  }
+  .hero .banner h3 {
+    font-size: 3rem;
+    font-weight: 500;
+    color: black;
+  }
+  .hero .banner p {
+    max-width: 520px;
+    margin: 40px 0;
+    color: black;
+  }
+  .hero .banner a {
+    width: fit-content;
+    text-decoration: none;
+    border-radius: 8px;
+  }
+
+  #pal{
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--palestine-green);
+  }
+
+  @media (max-width: 1520px) {
+    .hero {
+      min-width: 100%;
+      padding: 40px 20px;
+    }
+  }
+  @media (max-width: 1006px) {
+    .hero .banner h1 {
+      font-size: 3rem;
+    }
+    .hero .banner h3 {
+      font-size: 2rem;
+    }
+  }
+  @media (max-width: 767px) {
+    .hero {
+      flex-direction: column-reverse;
+    }
+    .hero .banner h3 {
+      font-size: 2rem;
+    }
+  }
+  @media (max-width: 400px) {
+    .hero .banner h1 {
+      font-size: 2rem;
+    }
+    .hero .banner h3 {
+      font-size: 1.6rem;
+    }
+  }
+  
+
+  .btn {
+    background: linear-gradient(90deg,var(--palestine-red),black,var(--palestine-green));
+    position: relative;
+    display: inline-block;
+    letter-spacing: 1.2px;
+    padding: 10px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+    animation: gradientAnimation 6s ease infinite;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-left: 9rem; 
+  
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .btn--primary {
+    color: white;
+  }
+  
+  .btn--border {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+  
+  .btn--animated {
+    transition-property: color;
+    transition-duration: 0.5s;
+  
+    &.btn--border.btn--primary {
+      border: 1px solid black;
+    }
+  
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--palestine-red);
+      transform: scaleX(0);
+      transform-origin: 0 50%;
+      transition-property: transform;
+      transition-duration: 0.5s;
+      transition-timing-function: ease-out;
+      z-index: -1;
+    }
+  
+    &:hover {
+      color: white;
+  
+      &:before {
+        transform: scaleX(1);
+        transition-timing-function: cubic-bezier(0.45, 1.64, 0.47, 0.66);
+      }
+    }
+  }

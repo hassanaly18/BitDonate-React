@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+:root {
+  --palestine-black: #000000;
+  --palestine-white: #ffffff;
+  --palestine-green: #007A3D;
+  --palestine-red: #CE1126;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -265,7 +272,7 @@
 }
 
 /************************FOOTER COMPONENT************************************************/
-footer {
+/* footer {
   background: #111;
   display: flex;
   border-bottom: 1px solid rgb(133, 133, 133);
@@ -275,7 +282,7 @@ footer div {
   flex: 1;
   padding-right: 20px;
 }
-footer div:first-child {
+footer div:first-hild {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -318,6 +325,9 @@ footer div ul a span {
   font-weight: 300;
   padding: 20px;
 }
+.fwrapper{
+  display: flex;
+}
 @media (max-width: 1112px) {
   footer {
     flex-wrap: wrap;
@@ -346,12 +356,21 @@ footer div ul a span {
     width: 100%;
     padding: 0;
   }
+} */
+/* .fwrapper{
+  display: grid;
 }
+.support{
+  display: none;
+  color: #111;
+} */
 
 /*******************NAVBAR COMPONENT***************************************/
 
-.navbar {
+/* .navbar {
   display: flex;
+  color: white;
+  background-color: #222;
   justify-content: space-between;
   border-bottom: 1px solid rgb(133, 133, 133);
   padding: 20px 110px;
@@ -364,7 +383,7 @@ footer div ul a span {
   flex: 1;
 }
 .navbar .logo img {
-  width: 100px;
+  width: 10vw;
 }
 .navbar .links {
   flex: 2;
@@ -382,11 +401,11 @@ footer div ul a span {
 .navbar .links ul li a {
   text-decoration: none;
   display: flex;
-  color: #444;
+  color: whitesmoke;
   transition: 0.3s;
 }
 .navbar .links ul li a:hover {
-  color: #facc15;
+  color: #CE1126;
   transition: 0.3s;
 }
 .navbar .links ul:last-child {
@@ -394,20 +413,21 @@ footer div ul a span {
 }
 .navbar .links ul:last-child li {
   padding: 8px;
-  border: 2px solid #facc15;
+  border: 2px solid var(--palestine-green);
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 100%;
-  background: #facc15;
+  background: var(--palestine-green);
   transition: 0.3s;
 }
 .navbar .links ul:last-child li:hover {
   background: transparent;
+  border: 2px solid var(--palestine-white);
   transition: 0.3s;
 }
 .navbar .links ul:last-child li:hover svg {
-  color: #facc15;
+  color: var(--palestine-red);
   transition: 0.3s;
 }
 .navbar .links ul li svg {
@@ -461,7 +481,8 @@ footer div ul a span {
     height: 447.42px;
     transition: 0.3s;
   }
-}
+} */
+
 
 /*************************NOTFOUND COMPONENT***************************************/
 .notfound {
@@ -517,7 +538,7 @@ footer div ul a span {
 }
 
 /*********************************MEMBERS MINI COMPONENT********************************************/
-.members {
+/* .members {
   display: flex;
   min-height: 100vh;
   justify-content: center;
@@ -614,10 +635,10 @@ footer div ul a span {
     width: 100%;
     padding: 20px 0;
   }
-}
+} */
 
 /***************QUALITIES MINI COMPONENT************************************/
-.qualities {
+/* .qualities {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -680,10 +701,10 @@ footer div ul a span {
   .qualities .container .card:nth-child(2) .img-wrapper {
     width: 100%;
   }
-}
+} */
 
 /**************************HERO MINI COMPONENT*********************************/
-.hero {
+/* .hero {
   min-width: 1500px;
   max-width: 1500px;
   margin: 0 auto;
@@ -746,7 +767,7 @@ footer div ul a span {
   .hero .banner h3 {
     font-size: 1.6rem;
   }
-}
+} */
 
 /********************** DONATE US COMPONENT************************/
 .donate {
@@ -781,3 +802,64 @@ footer div ul a span {
 .donate form input:focus {
   outline: none;
 }
+
+/* ****************************************************** */
+
+/* :root {
+  --palestine-black: #000000;
+  --palestine-white: #ffffff;
+  --palestine-green: #007A3D;
+  --palestine-red: #CE1126;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: var(--palestine-black);
+  background-color: var(--palestine-white);
+}
+
+.navbar {
+  background-color: var(--palestine-green);
+  color: var(--palestine-white);
+}
+
+.hero {
+  background-color: var(--palestine-red);
+  color: var(--palestine-white);
+}
+
+.btn {
+  background-color: var(--palestine-white);
+  color: var(--palestine-black);
+  border: 2px solid var(--palestine-black);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--palestine-green);
+  color: var(--palestine-white);
+}
+
+.donate-section {
+  background-color: var(--palestine-green);
+  color: var(--palestine-white);
+  padding: 2rem;
+  text-align: center;
+}
+
+.qualities {
+  background-color: var(--palestine-white);
+}
+
+.qualities .card {
+  border: 1px solid var(--palestine-green);
+}
+
+.qualities .title {
+  color: var(--palestine-green);
+}
+
+.members {
+  background-color: var(--palestine-black);
+  color: var(--palestine-white);
+} */
