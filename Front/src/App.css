@@ -25,7 +25,7 @@
 }
 
 /********************************ABOUT COMPONENT********************************************/
-.about {
+/* .about {
   padding: 40px 100px;
   min-height: 800px;
 }
@@ -157,7 +157,7 @@
   .about .our_progress {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
-}
+} */
 
 /***************************CONTACT COMPONENT*********************************************/
 .contact {
