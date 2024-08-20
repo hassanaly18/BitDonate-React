@@ -160,7 +160,7 @@
 } */
 
 /***************************CONTACT COMPONENT*********************************************/
-.contact {
+/* .contact {
   padding: 40px 100px;
   min-height: 800px;
   display: flex;
@@ -269,7 +269,7 @@
   .contact .banner .wrapper p {
     font-size: 16px;
   }
-}
+} */
 
 /************************FOOTER COMPONENT************************************************/
 /* footer {
