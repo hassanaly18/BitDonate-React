@@ -46,6 +46,12 @@
     color: var(--palestine-green);
   }
 
+  .flag{
+    height: 40vw; 
+    width: 40vw;
+    overflow: hidden;
+  }
+
   @media (max-width: 1520px) {
     .hero {
       min-width: 100%;
@@ -66,6 +72,11 @@
     }
     .hero .banner h3 {
       font-size: 2rem;
+    }
+    #banner1{
+      justify-content: center;
+      text-align: center;
+      align-items: center;
     }
   }
   @media (max-width: 400px) {

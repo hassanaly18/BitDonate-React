@@ -1,0 +1,261 @@
+:root {
+    --palestine-black: #000000;
+    --palestine-white: #ffffff;
+    --palestine-green: #007A3D;
+    --palestine-red: #CE1126;
+  }
+
+.contact {
+    padding: 40px 100px;
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .form{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .btnwrapper{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+  }
+  .btn1{
+    background: linear-gradient(90deg,var(--palestine-red),black,var(--palestine-green));
+    width: 30%;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 1.2px;
+    padding: 10px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+    animation: gradientAnimation 6s ease infinite;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* margin-left: 9rem;  */
+    margin-bottom: 1rem;
+  
+    &:focus {
+      outline: none;
+    }
+  }
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .btn1--primary {
+    color: white;
+  }
+  
+  .btn1--border {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .btn1--animated {
+    transition-property: color;
+    transition-duration: 0.5s;
+  
+    &.btn--border.btn--primary {
+      border: 1px solid black;
+    }
+  
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--palestine-red);
+      transform: scaleX(0);
+      transform-origin: 0 50%;
+      transition-property: transform;
+      transition-duration: 0.5s;
+      transition-timing-function: ease-out;
+      z-index: -1;
+    }
+  
+    &:hover {
+      color: white;
+  
+      &:before {
+        transform: scaleX(1);
+        transition-timing-function: cubic-bezier(0.45, 1.64, 0.47, 0.66);
+      }
+    }
+  }
+  .contact .container form h2 {
+    color: var(--palestine-green);
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+  }
+  #us{
+    color: var(--palestine-red);
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .contact .container {
+    display: flex;
+    height: 100%;
+    gap: 80px;
+  }
+
+  .banner{
+    background-color: whitesmoke;
+    z-index: 2;
+    border-radius: 2rem;
+    border: 3px solid var(--palestine-green);
+  }
+  .contact .container .banner:first-child {
+    min-width: 380px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+    gap: 30px;
+  }
+  .contact .container .banner:last-child {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .contact .banner .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgb(133, 133, 133);
+  }
+  .contact .banner .wrapper:last-child {
+    border: none;
+  }
+  .contact .banner .wrapper p:first-child {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .contact .banner .wrapper p span {
+    display: flex;
+    background: #facc15;
+    padding: 12px;
+    border-radius: 100%;
+  }
+  .contact .banner .wrapper p span svg {
+    font-size: 24px;
+    color: #fff;
+  }
+  .contact .banner form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .contact .banner form div {
+    display: flex;
+    gap: 20px;
+  }
+  .contact .banner form input {
+    flex: 1;
+  }
+  .contact .banner form input:focus,
+  .contact .banner form textarea:focus {
+    outline: none;
+  }
+  .contact .banner form input,
+  .contact .banner form textarea {
+    background: #8080805e;
+    border: none;
+    color: #555;
+    padding: 8px 3px;
+  }
+  @media (max-width: 920px) {
+    .contact {
+      padding: 40px 20px;
+    }
+    .contact .container {
+      flex-direction: column;
+    }
+    .contact .container .banner:first-child {
+      padding: 0;
+    }
+    .btnwrapper{
+        width: 100%;
+        align-items: center;
+    }
+  }
+  @media (max-width: 660px) {
+    .contact .container {
+      width: 100%;
+    }
+    .contact .banner form div {
+      flex-direction: column;
+    }
+    .contact .container {
+      gap: 30px;
+    }
+  }
+  @media (max-width: 430px) {
+    .contact .container {
+      padding: 0 15px; /* Add slight padding to avoid touching the edges */
+      width: 100%; /* Ensure container takes full width */
+    }
+  
+    .contact .banner {
+      padding: 20px 10px; /* Reduce padding inside banner */
+      min-width: auto; /* Remove the fixed minimum width */
+      width: 80%; /* Ensure banner takes full width */
+    }
+  
+    .contact .banner form {
+      padding: 0; /* Remove extra padding around the form */
+      width: 100%; /* Make sure the form takes the entire container's width */
+    }
+  
+    .contact .banner form div {
+      flex-direction: column; /* Stack inputs vertically */
+      gap: 10px; /* Adjust gap between inputs */
+    }
+  
+    .contact .banner form input,
+    .contact .banner form textarea {
+      width: 100%; /* Ensure inputs and textarea take full width */
+      box-sizing: border-box; /* Include padding and border in the element's width */
+    }
+  
+    .btnwrapper {
+      justify-content: center;
+      width: 100%; /* Ensure button wrapper takes full width */
+    }
+  
+    .btn1 {
+      width: auto; /* Let the button size itself based on content */
+    }
+  }
+  
+  @media (max-width: 380px) {
+    .contact .banner .wrapper p {
+      font-size: 16px;
+    }
+  }
+  
+  /* #btn1{
+    margin-bottom: 1rem;
+    margin-right: 50%;
+    width: 30%;
+    border-radius: 5px;
+  } */
+
+  

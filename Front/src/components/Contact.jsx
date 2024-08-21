@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
+import "./Contact.css"
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -38,7 +39,7 @@ const Contact = () => {
       <div className="container">
         <div className="banner">
           <form onSubmit={handleSendMessage}>
-            <h2>CONTACT US</h2>
+            <h2>CONTACT <span id="us">US</span></h2>
             <div>
               <input
                 type="text"
@@ -65,9 +66,11 @@ const Contact = () => {
               placeholder="Your Message"
               onChange={(e) => setMessage(e.target.value)}
             />
-            <button className="btn" type="submit">
-              Send
-            </button>
+            <div className="btnwrapper">
+              <button className="btn1 btn1--border btn1--primary btn1--animated" id="btn1" type="submit">
+                Send
+              </button>
+            </div>
           </form>
         </div>
       </div>

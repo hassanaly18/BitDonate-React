@@ -1,0 +1,152 @@
+:root {
+    --palestine-black: #000000;
+    --palestine-white: #ffffff;
+    --palestine-green: #007A3D;
+    --palestine-red: #CE1126;
+  }
+
+.about {
+    padding: 40px 100px;
+    min-height: 800px;
+  }
+  .about .hero {
+    display: flex;
+    gap: 30px;
+  }
+  .about .hero .banner {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+  }
+  .about .hero .banner img {
+    height: 100%;
+  }
+  .about .hero .banner h1 {
+    color: var(--palestine-green);
+    font-size: 3.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+  }
+  #our{
+    color: var(--palestine-red);
+    font-size: 3.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    /* word-spacing: 5px; */
+  }
+  .about .our_progress {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    padding: 50px 0;
+  }
+  .about .our_progress .card {
+    border: 1px solid rgb(133, 133, 133);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+  }
+  .about .our_progress .icon,
+  .about .services .icon {
+    display: flex;
+    padding: 13px;
+    background: #80808078;
+    border-radius: 100%;
+  }
+  .about .our_progress .icon svg,
+  .about .services .icon svg {
+    color: #fff;
+    background: black;
+    border-radius: 100%;
+    font-size: 45px;
+    padding: 9px;
+    transition: 0.3s;
+  }
+  .about .our_progress h3,
+  .about .services h3 {
+    font-size: 28px;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  .about .our_progress p,
+  .about .services p {
+    color: gray;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  .about .our_progress .card:hover {
+    background: #facc15;
+    transition: 0.3s;
+  }
+  .about .our_progress .card:hover .icon svg {
+    background: #fff;
+    color: #111;
+    transition: 0.3s;
+  }
+  .about .our_progress .card:hover h3 {
+    color: #fff;
+    transition: 0.3s;
+  }
+  .about .our_progress .card:hover p {
+    color: #fff;
+    transition: 0.3s;
+  }
+  .services {
+    display: flex;
+    gap: 20px;
+    padding: 50px 0;
+  }
+  .services .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    gap: 15px;
+  }
+  @media (max-width: 1250px) {
+    .about .services .card {
+      text-align: center;
+    }
+    .about .services h3 {
+      font-size: 22px;
+    }
+  }
+  @media (max-width: 1060px) {
+    .about .our_progress {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .about .services h3 {
+      font-size: 26px;
+    }
+  }
+  @media (max-width: 920px) {
+    .about {
+      padding: 40px 20px;
+      min-height: 800px;
+    }
+  }
+  @media (max-width: 800px) {
+    .about .hero {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+  @media (max-width: 700px) {
+    .services {
+      flex-direction: column;
+    }
+  }
+  @media (max-width: 660px) {
+    .about .our_progress {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .banner img{
+        width: 50vw;
+    }
+  }
