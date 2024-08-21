@@ -113,12 +113,12 @@
     gap: 80px;
   }
 
-  .banner{
+  /* .banner{
     background-color: whitesmoke;
     z-index: 2;
     border-radius: 2rem;
     border: 3px solid var(--palestine-green);
-  }
+  } */
   .contact .container .banner:first-child {
     min-width: 380px;
     display: flex;
